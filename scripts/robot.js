@@ -1,6 +1,6 @@
-import {greet, bake, bites} from (/modules/tasks.mjs)
+import {greet, bake, bites} from "../modules/tasks.mjs"
 greet("john")
 
-bake("lemon", 3)
+bake(3, "lemon")
 
 bites(8)
