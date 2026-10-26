@@ -26,7 +26,13 @@
 /**body tag**/
 body{
   font-family: "BioRhyme Expanded", serif;
-
+  background: no-repeat;
+  margin:0;
+  padding:0;
+  background-size:cover;
+  height: 100vh;
+  background-position:center;
+  transition: background-image 0.5s ease;
 }
 
 /**header tag**/
@@ -178,98 +184,6 @@ nav li a.active {
         font-weight: 400;
     }
 
-/**Flag area as a GRID layout**/
-.grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    margin:10px;
-    gap:10px;
-}
-
-.grid img{
-    width:100%;
-    height: auto;
-}
-
-/**Flag area as a LIST layout**/
-.list section{
-    display: grid;
-    grid-template-columns: 100px auto;
-    gap:10px;
-    grid-template-areas: 
-    "flag name"
-    "flag capital"
-}
-
-.list{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.list img{
-    grid-area: flag;
-    width:100%;
-    height: auto;   
-}
-
-.list h2{
-    grid-area: name;
-    margin: 0;
-}
-
-.list p{
-    grid-area: languages;
-    margin:0;
-}
-
-/**Styles the parent division **/
-.btn-layouts{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-radius: 2rem;
-    width: 100px;
-    height: 54px;
-    border: 1px solid black;
-    margin: 0 auto;
-}
-/**Styles both buttons **/
-.btn-layouts button{
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    text-align:center;
-    border:none;
-    width: 50px;
-    height: 50px;
-    background-color: rgba(255, 255, 255, 1.0);
-        &:hover{
-        background-color: var(--color-mygrey-30);
-        box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    }
-}
-
-/* First button: rounded on the left */
-.btn-layouts button:first-child {
-    border-radius: 1.5rem 0 0 1.5rem;
-}
-
-/* Second button: rounded on the right */
-.btn-layouts button:last-child {
-    border-radius: 0 1.5rem 1.5rem 0;
-}
-
-/**Styles the grid/list svg image **/
-.btn-layouts img{
-    width:20px;
-    height:20px;
-}
-/**Styles the wayfinding **/
-.btn-layouts .show{
-    background-color: yellow;
-}
 
  /**Display Styles tag**/
 .display h3{
