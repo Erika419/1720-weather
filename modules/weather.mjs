@@ -15,7 +15,17 @@ function displayWeather(cw){
     console.log(cw)
     console.log(cw.weather[0].description)
     document.querySelector("#show-here").innerHTML= cw.weather[0].description
-    document.querySelector("#show-here").innerHTML= `https://openweathermap.org/payload/api/media/file/${cw.weather[0].icon}.png`
+    document.querySelector("#show-here").innerHTML= `<img src="https://openweathermap.org/payload/api/media/file/${cw.weather[0].icon}.png">`
+    document.querySelector("#show-here").innerHTML=`
+    <p> Sunrise: ${convert(cw.sys.sunrise)} AM</p>
+    <p> Sunset: ${convert(cw.sys.sunset)} PM</p>`
 }
 
-//https://openweathermap.org/payload/api/media/file/${cw.weather[0].icon}.png
+//internal function used to convert time
+function convert(ts) {
+    const sunTime= new Date(ts*1000)
+    const h= sunTime.getHours()>12 ? sunTime.getHours() - 12 : sunTime.getHours();
+    const m= sunTime.getMinutes().toString().padStart(2,"0")
+
+    return  `${h}:${m}`
+}
