@@ -15,4 +15,7 @@ function displayWeather(cw){
     console.log(cw)
     console.log(cw.weather[0].description)
     document.querySelector("#show-here").innerHTML= cw.weather[0].description
+    document.querySelector("#show-here").innerHTML= `https://openweathermap.org/payload/api/media/file/${cw.weather[0].icon}.png`
 }
+
+//https://openweathermap.org/payload/api/media/file/${cw.weather[0].icon}.png
