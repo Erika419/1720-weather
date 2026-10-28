@@ -14,9 +14,10 @@ export async function getCurrentWeather(lat, lon){
 function displayWeather(cw){
     console.log(cw)
     console.log(cw.weather[0].description)
-    document.querySelector("#show-here").innerHTML= cw.weather[0].description
-    document.querySelector("#show-here").innerHTML= `<img src="https://openweathermap.org/payload/api/media/file/${cw.weather[0].icon}.png">`
-    document.querySelector("#show-here").innerHTML=`
+    //changed the show-here id into a class
+    document.querySelector(".show-here").innerHTML= cw.weather[0].description
+    document.querySelector(".show-here").innerHTML= `<img src="https://openweathermap.org/payload/api/media/file/${cw.weather[0].icon}.png">`
+    document.querySelector(".show-here").innerHTML=`
     <p> Sunrise: ${convert(cw.sys.sunrise)} AM</p>
     <p> Sunset: ${convert(cw.sys.sunset)} PM</p>`
 }
