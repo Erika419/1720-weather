@@ -44,9 +44,9 @@ function convert(ts) {
     const m= sunTime.getMinutes().toString().padStart(2,"0")
     return `${h}:${m}`
 }
-    //speak up
+//speak up
+
 function displayInfo(message){
     const x = document.querySelector('#info')
-    x.innerHTML += "<p>robot says</p>"
     x.innerHTML += message
 }
