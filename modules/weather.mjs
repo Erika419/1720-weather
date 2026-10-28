@@ -7,6 +7,9 @@ export async function getCurrentWeather(lat, lon){
           // Get the weather data once
         const cw = await response.json();
 
+        // Clear the previous park's information
+        document.querySelector("#info").innerHTML = "";
+
         // Display the information
         displayWeather(cw);
         displayLogo(cw);
