@@ -16,16 +16,15 @@ function displayWeather(cw){
     console.log(cw)
     console.log(cw.weather[0].description)
     document.querySelector(".show-here").innerHTML= cw.weather[0].description
-    document.querySelector(".show-here").innerHTML=
-    `<p> Weather: ${cw.weather[0].description} </p>`
+    displayInfo(`<p> Weather: ${cw.weather[0].description} </p>`)
 }
 
 
 function displayLogo(cw){
     document.querySelector(".show-here").innerHTML= `<img src="https://openweathermap.org/payload/api/media/file/${cw.weather[0].icon}.png">`
-    document.querySelector(".show-here").innerHTML+=`
+    displayInfo(`
     <p> Sunrise: ${convert(cw.sys.sunrise)} AM</p>
-    <p> Sunset: ${convert(cw.sys.sunset)} PM</p>`
+    <p> Sunset: ${convert(cw.sys.sunset)} PM</p>`)
 }
 
 
@@ -34,6 +33,14 @@ function convert(ts) {
     const sunTime= new Date(ts*1000)
     const h= sunTime.getHours()>12 ? sunTime.getHours() - 12 : sunTime.getHours();
     const m= sunTime.getMinutes().toString().padStart(2,"0")
+    displayInfo(`${h}:${m}`)
 
-    return  `${h}:${m}`
+    //speak up
+function displayInfo(message){
+    console.log("Robot says");
+    console.log(message);
+    const x = document.querySelector('#info')
+    x.innerHTML += "<p>robot says</p>"
+    x.innerHTML += message
+}
 }
