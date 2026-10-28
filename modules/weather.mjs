@@ -20,20 +20,19 @@ export async function getCurrentWeather(lat, lon){
     }
 }
 
-//internal function to displaythe current parks weather info and time
-function displayWeather(cw){
-    console.log(cw)
-    console.log(cw.weather[0].description)
-    displayInfo(`<p> Weather: ${cw.weather[0].description} </p>`)
-}
-
-
 function displayLogo(cw){
     displayInfo(`
     <img src="https://openweathermap.org/payload/api/media/file/${cw.weather[0].icon}.png">
     
     <p> Sunrise: ${convert(cw.sys.sunrise)} AM</p>
     <p> Sunset: ${convert(cw.sys.sunset)} PM</p>`)
+}
+
+//internal function to displaythe current parks weather info and time
+function displayWeather(cw){
+    console.log(cw)
+    console.log(cw.weather[0].description)
+    displayInfo(`<p> Weather: ${cw.weather[0].description} </p>`)
 }
 
 
