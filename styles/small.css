@@ -303,6 +303,10 @@ nav li a.active {
     }
 }
 
+/**1720-Weather styling**/
+#info{
+    background-color: red;
+}
 
 /**footer tag**/
     footer{
