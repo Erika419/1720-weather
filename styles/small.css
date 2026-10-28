@@ -317,10 +317,17 @@ nav li a.active {
 }
 
 button{
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;  
+
     padding:10px;
     margin: 5px;
     background-color: var(--color-primary);
-    color:#232323;
+    color:white;
      &:hover{
         box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
