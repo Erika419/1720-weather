@@ -308,6 +308,7 @@ nav li a.active {
 #info{
     background-color: rgba(208, 208, 208, 0.542);
     display:flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
