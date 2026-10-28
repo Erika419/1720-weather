@@ -19,7 +19,7 @@ document.querySelector("#park4").addEventListener("click", () => {
 })
 
 //Display on page load
-nationalParkImages(<div style="color:red">Wasatch"</div>, "nationalpark1.webp");
+nationalParkImages("Wasatch", "nationalpark1.webp");
 nationalParkImages("Everglades", "nationalpark2.webp");
 nationalParkImages("Bryce Canyon", "nationalpark3.webp");
 nationalParkImages("Mammoth", "nationalpark4.webp");
