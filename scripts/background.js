@@ -6,7 +6,7 @@ document.querySelector("#park1").addEventListener("click", () => {
     nationalParkImages("Wasatch", "nationalpark1.webp");
 })
 
-document.querySelector("#car2").addEventListener("click", () => {
+document.querySelector("#park2").addEventListener("click", () => {
     nationalParkImages("Everglades", "nationalpark2.webp");
 })
 
