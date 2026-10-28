@@ -305,7 +305,12 @@ nav li a.active {
 
 /**1720-Weather styling**/
 #info{
-    background-color: red;
+    background-color: rgba(208, 208, 208, 0.542);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;  
 }
 
 /**footer tag**/
