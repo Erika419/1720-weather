@@ -10,12 +10,15 @@ export async function getCurrentWeather(lat, lon){
     }
 }
 
-//internal function to displaythe current parks weather info
+//internal function to displaythe current parks weather info and time
 function displayWeather(cw){
     console.log(cw)
     console.log(cw.weather[0].description)
-    //changed the show-here id into a class
     document.querySelector(".show-here").innerHTML= cw.weather[0].description
+    document.querySelector("show-here").innerHTML=
+    `<p> Weather: ${convert(cw.weather[0].description)} AM</p>
+    `
+
     document.querySelector(".show-here").innerHTML= `<img src="https://openweathermap.org/payload/api/media/file/${cw.weather[0].icon}.png">`
     document.querySelector(".show-here").innerHTML=`
     <p> Sunrise: ${convert(cw.sys.sunrise)} AM</p>
