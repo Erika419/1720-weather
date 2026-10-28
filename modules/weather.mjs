@@ -19,7 +19,7 @@ function displayWeather(cw){
     `<p> Weather: ${cw.weather[0].description} </p>`
 }
 
-function displayTime(cw){
+function displayWeather(cw){
     document.querySelector(".show-here").innerHTML= `<img src="https://openweathermap.org/payload/api/media/file/${cw.weather[0].icon}.png">`
     document.querySelector(".show-here").innerHTML+=`
     <p> Sunrise: ${convert(cw.sys.sunrise)} AM</p>
