@@ -16,7 +16,7 @@ function displayWeather(cw){
     console.log(cw.weather[0].description)
     document.querySelector(".show-here").innerHTML= cw.weather[0].description
     document.querySelector(".show-here").innerHTML=
-    `<p> Weather: ${convert(cw.weather[0].description)} </p>`
+    `<p> Weather: ${cw.weather[0].description} </p>`
 }
 
 function displayTime(cw){
