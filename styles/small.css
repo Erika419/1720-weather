@@ -318,7 +318,6 @@ nav li a.active {
 
 button{
     bottom: 0;
-    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
