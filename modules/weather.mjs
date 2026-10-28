@@ -5,7 +5,6 @@ export async function getCurrentWeather(lat, lon){
     try {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`)
         displayWeather(await response.json())
-        displayTime(await response.json())
         displayLogo(await response.json())
     } catch (error) {
         console.error("Fetch error:", error)
