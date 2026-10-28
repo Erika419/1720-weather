@@ -3,7 +3,7 @@ import {nationalParkImages} from "../modules/test.mjs"
 
 //buttons
 document.querySelector("#park1").addEventListener("click", () => {
-    nationalParkImages("Wasatch", "nationalpark1.webp");
+    nationalParkImages(<div style="color:red;">Wasatch</div>, "nationalpark1.webp")
 })
 
 document.querySelector("#park2").addEventListener("click", () => {
