@@ -26,6 +26,7 @@
 /**body tag**/
 body{
   font-family: "BioRhyme Expanded", serif;
+  color: black;
   background: no-repeat;
   margin:0;
   padding:0;
@@ -310,6 +311,7 @@ nav li a.active {
     justify-content: center;
     align-items: center;
     text-align: center;
+    height: auto;
     margin: 0 auto;  
 }
 
