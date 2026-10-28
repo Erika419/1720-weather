@@ -316,6 +316,16 @@ nav li a.active {
     margin: 0 auto;  
 }
 
+button{
+    padding:10px;
+    margin: 5px;
+    background-color: var(--color-primary);
+    color:#232323;
+     &:hover{
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+}
+
 /**footer tag**/
     footer{
         background-color: #ddd;
