@@ -5,6 +5,8 @@ export async function getCurrentWeather(lat, lon){
     try {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`)
         displayWeather(await response.json())
+        displayTime(await response.json())
+        displayLogo(await response.json())
     } catch (error) {
         console.error("Fetch error:", error)
     }
@@ -19,7 +21,7 @@ function displayWeather(cw){
     `<p> Weather: ${cw.weather[0].description} </p>`
 }
 
-function displayWeather(cw){
+function displayLogo(cw){
     document.querySelector(".show-here").innerHTML= `<img src="https://openweathermap.org/payload/api/media/file/${cw.weather[0].icon}.png">`
     document.querySelector(".show-here").innerHTML+=`
     <p> Sunrise: ${convert(cw.sys.sunrise)} AM</p>
