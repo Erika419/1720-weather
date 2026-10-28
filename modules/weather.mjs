@@ -12,7 +12,14 @@ export async function getCurrentWeather(lat, lon){
     }
 }
 
-
+//internal function to displaythe current parks weather info and time
+function displayWeather(cw){
+    console.log(cw)
+    console.log(cw.weather[0].description)
+    document.querySelector(".show-here").innerHTML= cw.weather[0].description
+    document.querySelector(".show-here").innerHTML=
+    `<p> Weather: ${cw.weather[0].description} </p>`
+}
 
 
 function displayLogo(cw){
@@ -20,4 +27,14 @@ function displayLogo(cw){
     document.querySelector(".show-here").innerHTML+=`
     <p> Sunrise: ${convert(cw.sys.sunrise)} AM</p>
     <p> Sunset: ${convert(cw.sys.sunset)} PM</p>`
+}
+
+
+//internal function used to convert time
+function convert(ts) {
+    const sunTime= new Date(ts*1000)
+    const h= sunTime.getHours()>12 ? sunTime.getHours() - 12 : sunTime.getHours();
+    const m= sunTime.getMinutes().toString().padStart(2,"0")
+
+    return  `${h}:${m}`
 }
