@@ -334,7 +334,14 @@ button{
 }
 
 h2{
-    color:red;
+    color:black;
+    background-color: rgba(208, 208, 208, 0.542);
+    width:auto;
+
+        display: flex;
+    justify-content: center;
+    align-items: center;
+        flex-wrap: wrap;
 }
 
 /**footer tag**/
