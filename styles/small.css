@@ -333,6 +333,10 @@ button{
 }
 }
 
+h2{
+    color:red;
+}
+
 /**footer tag**/
     footer{
         background-color: #ddd;
