@@ -3,7 +3,7 @@ import {nationalParkImages} from "../modules/test.mjs"
 
 //buttons
 document.querySelector("#park1").addEventListener("click", () => {
-    nationalParkImages("Wasatch", "nationalpark1.webp")
+    nationalParkImages(<style color="red">"Wasatch"</style>, "nationalpark1.webp")
 })
 
 document.querySelector("#park2").addEventListener("click", () => {
@@ -19,7 +19,9 @@ document.querySelector("#park4").addEventListener("click", () => {
 })
 
 //Display on page load
+
 nationalParkImages("Wasatch", "nationalpark1.webp");
 nationalParkImages("Everglades", "nationalpark2.webp");
 nationalParkImages("Bryce Canyon", "nationalpark3.webp");
 nationalParkImages("Mammoth", "nationalpark4.webp");
+
